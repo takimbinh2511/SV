@@ -9,7 +9,7 @@ const checkEmpty = (req, res, next) => {
      res.status(500).send("Không được để trống");
  }
 }
-// Fix loi ngay cho nay
+// Finish
 module.exports ={
     checkEmpty,
 }
