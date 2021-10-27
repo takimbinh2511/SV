@@ -1,5 +1,5 @@
 const express = require("express");
-const router = require("../app/routers/root.router");
+const router = require("./app/routers/root.router");
 const app = express();
 // const port = 3000;
 
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(router);
 
 //setup sequelize
-const {sequelize} = require("./model");
+const {sequelize} = require("./app/model");
 sequelize.sync({alter : true});
 
 app.get('/', (req, res) => {
