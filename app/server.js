@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 
 
+
 app.use(router);
 
 //setup sequelize
@@ -18,6 +19,8 @@ sequelize.sync({alter : true});
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
+
 
 const PORT = process.env.PORT || 3000;
 
